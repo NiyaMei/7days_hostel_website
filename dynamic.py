@@ -1,5 +1,4 @@
 from flask import Flask, render_template, url_for, request, redirect
-from forms import RegistrationForm, LoginForm
 from flask_bootstrap import Bootstrap
 
 
@@ -30,7 +29,7 @@ def english():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=int(os.environ.get('PORT', 5000)))
 
 
 
